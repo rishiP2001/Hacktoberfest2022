@@ -8,12 +8,20 @@ import android.widget.Toast
 class StartAppOnBoot : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
 
-//        Toast.makeText(context,"Strating ser",Toast.LENGTH_LONG).show()
-
-            val serintent= Intent(context, notificationServices::class.java)
+        // Notifies when a service is goin to start
+        Toast.makeText(context,"Strating service",Toast.LENGTH_LONG).show()
+ 
+        launchService()
+         
+    }
+    
+    fun launchService(){
+        runonuithread {
+            val serintent = Intent(context, notificationServices::class.java)
 
             context!!.startService(serintent)
 
-
+        }
     }
+    
 }

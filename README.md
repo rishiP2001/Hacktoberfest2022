@@ -13,16 +13,6 @@ A month-long celebration from October 1st - 31st sponsored by [Digital Ocean](ht
 
 [https://hacktoberfest.com/](https://hacktoberfest.com/)
 
-## How to contribute to this project
-
-Here are 3 quick and painless ways to contribute to this project:
-
-- Add your name to the `CONTRIBUTING.md` file
-- Add a profile page to the `profiles` directory
-- Create a simple "Hello, World" script in a language of your choice
-
-Choose one or all 3, make a pull request for your work and wait for it to be merged!
-
 ## Getting started
 
 - Fork this repository (Click the Fork button in the top right of this page, click your Profile Image)
@@ -55,20 +45,4 @@ git push origin branch-name
 
 - Sync Adapter not working in My code Application 
 - Improve UI  of Brain Samsher game
-
-
-## Reference links
-
-Here is a great tutorial for creating your first pull request by [Roshan Jossey](https://github.com/Roshanjossey):
-[https://github.com/Roshanjossey/first-contributions](https://github.com/Roshanjossey/first-contributions)
-
-Managing your Forked Repo: [https://help.github.com/articles/fork-a-repo/](https://help.github.com/articles/fork-a-repo/)
-
-Syncing a Fork: [https://help.github.com/articles/syncing-a-fork/](https://help.github.com/articles/syncing-a-fork/)
-
-Keep Your Fork Synced: [https://gist.github.com/fineanmol/f9b8943230e7031ae78cdcd1755bef32](https://gist.github.com/fineanmol/f9b8943230e7031ae78cdcd1755bef32)
-
-Checkout this list for README examples - Awesome README [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-
-Github-Flavored Markdown [https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/)
 

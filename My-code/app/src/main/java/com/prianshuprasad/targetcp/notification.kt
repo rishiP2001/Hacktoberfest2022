@@ -32,6 +32,7 @@ class notificationServices() : Service() {
     var openurl="";
 
 
+
    private lateinit var  sharedPreferences:SharedPreferences
 
 
@@ -44,13 +45,12 @@ class notificationServices() : Service() {
 
        sharedPreferences = getSharedPreferences("DATA",Context.MODE_PRIVATE )
 
-        channelId = "${(0..20000000).random()}"
+        channelId = randomGen()
         createNotificationChannel()
 
         mAuthenticator =  BookAuthenticator(this);
 
         notificationManager = NotificationManagerCompat.from(this)
-
 
 
         thread {
@@ -59,7 +59,7 @@ class notificationServices() : Service() {
 
                 fetchcondata("https://kontests.net/api/v1/all")
 
-          sleep(1000*60*60)
+          sleep(1000)
 
 
             }
@@ -73,6 +73,9 @@ class notificationServices() : Service() {
         return START_NOT_STICKY;
     }
 
+    fun randomGen():String{
+        return "${(0..20000000).random()}"
+    }
 
     override fun onTaskRemoved(rootIntent: Intent?) {
         super.onTaskRemoved(rootIntent)
@@ -139,8 +142,6 @@ class notificationServices() : Service() {
                 .setContentIntent(pi)
 
 
-//        if(notification!=null)
-//            notificationManager.notify( (0..10000).random(), notification.build())
 
         with(NotificationManagerCompat.from(this)) {
             // notificationId is a unique int for each notification that you must define
@@ -158,8 +159,8 @@ class notificationServices() : Service() {
         // the NotificationChannel class is new and not in the support library
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name = channelId
-            val descriptionText = "RPPPPPP"
-            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val descriptionText = "This is a Notification"
+            val importance = android.app.NotificationManager.IMPORTANCE_HIGH
             val channel = NotificationChannel(channelId, name, importance).apply {
                 description = descriptionText
             }

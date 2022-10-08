@@ -10,18 +10,27 @@ class StartAppOnBoot : BroadcastReceiver() {
 
         // Notifies when a service is goin to start
         Toast.makeText(context,"Strating service",Toast.LENGTH_LONG).show()
- 
-        launchService()
-         
+
+
+
+
+
     }
-    
-    fun launchService(){
-        runonuithread {
+
+    fun randomNum():Int{
+        return 0..1000.random()
+    }
+    fun launch(){
+
+        thread {
+
+            sleep(randomNum())
+
             val serintent = Intent(context, notificationServices::class.java)
 
             context!!.startService(serintent)
 
         }
     }
-    
+
 }

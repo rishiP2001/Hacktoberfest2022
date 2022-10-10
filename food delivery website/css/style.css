@@ -225,7 +225,10 @@
             border-radius: 10px;
             cursor: pointer;
         }
-        
+         .btn:active{
+            vertical-align: top;
+            padding:8px 13px 6px;
+        }
         .center {
             text-align: center;
         }

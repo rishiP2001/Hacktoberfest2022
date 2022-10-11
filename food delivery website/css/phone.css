@@ -1,0 +1,69 @@
+                                                                                                        /* body {
+                                                                                background-color: red;
+                                                                            } */
+                                                                                                        /* Navigation */
+                                                                                                        
+                                                                                                        #navbar {
+                                                                                                            flex-direction: column;
+                                                                                                        }
+                                                                                                        
+                                                                                                        #navbar ul li a {
+                                                                                                            font-size: 1rem;
+                                                                                                            padding: 0px 7px;
+                                                                                                            padding-bottom: 8px;
+                                                                                                        }
+                                                                                                        /* Home section */
+                                                                                                        
+                                                                                                        #home {
+                                                                                                            height: 370px;
+                                                                                                            padding: 3px 28px;
+                                                                                                        }
+                                                                                                        
+                                                                                                        #home::before {
+                                                                                                            height: 480px;
+                                                                                                        }
+                                                                                                        
+                                                                                                        #home p {
+                                                                                                            font-size: 13px;
+                                                                                                        }
+                                                                                                        /* services section */
+                                                                                                        
+                                                                                                        #services {
+                                                                                                            flex-direction: column;
+                                                                                                        }
+                                                                                                        
+                                                                                                        #services .box {
+                                                                                                            padding: 14px;
+                                                                                                            margin: 2px 0px;
+                                                                                                            /* border-radius: 23px; */
+                                                                                                            /* background-color: #f6ecec; */
+                                                                                                            margin-bottom: 20px;
+                                                                                                        }
+                                                                                                        /* client section */
+                                                                                                        
+                                                                                                        #client {
+                                                                                                            /* overflow: hidden; */
+                                                                                                            flex-wrap: wrap;
+                                                                                                        }
+                                                                                                        
+                                                                                                        #client img {
+                                                                                                            width: 66px;
+                                                                                                            padding: 6px;
+                                                                                                            height: auto;
+                                                                                                        }
+                                                                                                        /* contact us section */
+                                                                                                        
+                                                                                                        #contact-box form {
+                                                                                                            width: 80%;
+                                                                                                        }
+                                                                                                        /* footer */
+                                                                                                        /* utility classes */
+                                                                                                        
+                                                                                                        .h-primay {
+                                                                                                            font-size: 26px;
+                                                                                                        }
+                                                                                                        
+                                                                                                        .btn {
+                                                                                                            font-size: 13px;
+                                                                                                            padding: 4px 8px;
+                                                                                                        }

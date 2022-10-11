@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+
+    <RelativeLayout
+
+        android:id="@+id/WebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize">
+
+            <EditText
+                android:id="@+id/location_view"
+                android:layout_width="250dp"
+
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="google.com"
+                android:importantForAutofill="no"
+                android:inputType="text|textUri"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
+
+            <ImageButton
+                android:id="@+id/newTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_box_24"
+
+                />
+
+            <ImageButton
+                android:id="@+id/tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_backup_table_24" />
+
+
+        </Toolbar>
+        <ProgressBar
+            android:id="@+id/page_progress"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignBottom="@id/toolbar" />
+
+        <org.mozilla.geckoview.GeckoView
+            android:id="@+id/geckoview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity"
+            android:layout_below="@id/toolbar"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tabView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="@string/browser_tab"
+            style="bold"
+            android:layout_centerHorizontal="true"
+
+
+
+            />
+
+          <ImageButton
+              android:id="@+id/back"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/ic_baseline_arrow_back_ios_24"
+
+              />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/back"
+
+
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

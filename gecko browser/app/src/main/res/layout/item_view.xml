@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:layout_marginLeft="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="5dp"
+
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <org.mozilla.geckoview.GeckoView
+        android:id="@+id/tabWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+
+        <ImageView
+            android:id="@+id/closeTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_close_24"
+            android:layout_gravity="right"
+
+
+            />
+
+
+
+
+        <TextView
+            android:id="@+id/webName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:singleLine="true"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="Website Name"
+            />
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

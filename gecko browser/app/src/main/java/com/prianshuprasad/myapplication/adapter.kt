@@ -73,7 +73,14 @@ class contestAdapter(private val listener: MainActivity2) :
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        val curritem = item[position]
+        setup(viewHolder, position);
+    
+
+    }
+    
+    fun setup(viewHolder: ViewHolder, position: Int){
+        
+         val curritem = item[position]
 
 
 
@@ -83,13 +90,10 @@ class contestAdapter(private val listener: MainActivity2) :
 
         viewHolder.image.bringToFront()
         viewHolder.closeButton.bringToFront()
-
-
-//        viewHolder.geckoView.releaseSession()
-
-
-
+        
     }
+    
+    
 
     // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount() = item.size

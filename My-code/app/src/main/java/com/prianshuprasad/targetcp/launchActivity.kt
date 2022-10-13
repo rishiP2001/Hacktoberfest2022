@@ -10,6 +10,7 @@ import android.os.Handler
 import android.widget.Toast
 
 class launchActivity : AppCompatActivity() {
+    private lateinit var handler:Handler
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -19,20 +20,31 @@ class launchActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_launch)
 //
+   handler= Handler();
         val serintent= Intent(this, notificationServices::class.java)
 
         startForegroundService(serintent)
 
-         Handler().postDelayed({
+        wait();
+       
+
+    }
+    fun wait(){
+        
+        
+          handler.postDelayed({
              val intent= Intent(this, MainActivity::class.java)
 
              startActivity(intent)
             finish()
 
-         },1000)
+         },900)
 
-
+        
+        
     }
+    
+    
     override fun onDestroy() {
         super.onDestroy()
 

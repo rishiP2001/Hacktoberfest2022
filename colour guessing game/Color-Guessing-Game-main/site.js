@@ -104,6 +104,13 @@ function generateRandomColor(num)
         var temp2=Math.floor(Math.random()*256);
         var temp3=Math.floor(Math.random()*256);
         var temp="rgb("+temp1+", "+temp2+", "+temp3+")";
+        
+        
+        if(temp1==35 && temp2==35 && temp3==35)     //Generated Color will be different from background color
+        {
+            i--;
+            continue;
+        }
         c.push(temp);
     }
     return c;
